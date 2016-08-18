@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="routeApp">
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body ng-controller="mainController">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header"> <a class="navbar-brand" href="/">Routing example</a> </div>
+            <div class="nav navbar-nav navbar-right">
+                <a href="#"><i class="fa fa-home"></i> Page 1 </a>
+                <a href="#page2"><i class="fa fa-shield"></i> Page 2 </a>
+                <a href="#page3"><i class="fa fa-comment"></i> Page 3</a> 
+            </div>
+        </div>
+    </nav>
+    <div id="main">
+        <div ng-view></div>
+    </div>
+    <footer class="text-center"> Footer </footer>
+</body>
+
+</html>
