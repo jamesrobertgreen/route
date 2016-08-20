@@ -4,22 +4,30 @@
 <head>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="scripts/script.js"></script>
 </head>
 
 <body ng-controller="mainController">
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header"> <a class="navbar-brand" href="/">Routing example</a> </div>
-            <div class="nav navbar-nav navbar-right">
-                <a href="#"><i class="fa fa-home"></i> Page 1 </a>
-                <a href="#page2"><i class="fa fa-shield"></i> Page 2 </a>
-                <a href="#page3"><i class="fa fa-comment"></i> Page 3</a> 
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header"> <a class="navbar-brand" href="/">Routing example</a> </div>
+                <div id="navbar" class="nav navbar-collapse collapse navbar-left">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" class="btn btn-default btn-lg">Page 1</a> </li>
+                        <li><a href="#page2" class="btn btn-default btn-lg">Page 2</a> </li>
+                        <li><a href="#page3" class="btn btn-default btn-lg">Page 3</a></li>
+                    </ul>
+                </div>
             </div>
+        </nav>
+        <div id="main">
+            <div ng-view></div>
         </div>
-    </nav>
-    <div id="main">
-        <div ng-view></div>
     </div>
     <footer class="text-center"> Footer </footer>
 </body>
